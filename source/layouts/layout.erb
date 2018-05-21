@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>My Profile</title>
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <%=stylesheet_link_tag "style" %>
+</head>
+<body>
+  <header class="header-banner">
+    <span class="banner-text"> Duke Basketball
+  </header>
+  <div>
+    <h1 class="text-center">
+      <span class="main-text-color"> Duke Basketball!</span>
+      <span id="name" class="main-text-color"></span>
+      <span class="main-text-color exclamation-mark"></span>
+    </h1>
+    <div class="images-parent">
+      <div>
+        <img class="images" src="https://img.bleacherreport.net/img/images/photos/003/718/021/hi-res-b730f72c8a3f46d9fc55a4af6a974e03_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top">
+        <p class="main-text-color text-center small-text">This is Grayson Allen.</p>
+      </div>
+      <div>
+        <img class="images" src="https://img.bleacherreport.net/img/images/photos/003/707/582/hi-res-ae4659baaeb3c17e8145bef41e598be1_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top">
+        <p class="main-text-color text-center small-text">This is Marvin Bagley III.</p>
+      </div>
+      <div>
+        <img class="images" src="http://img.bleacherreport.net/img/images/photos/003/667/816/hi-res-22947693b4ca4ed2add45eef160b798e_crop_north.jpg?h=533&w=800&q=70&crop_x=center&crop_y=top">
+        <p class="main-text-color text-center small-text">This is Marques Bolden.</p>
+      </div>
+      <div>
+        <img class="images" src="http://www.yardbarker.com/media/d/3/d3406b2bc946f2f235de0837909644630307c958/thumb_16x9/10441289.jpg">
+        <p class="main-text-color text-center small-text">This is Trevon Duval.</p>
+      </div>
+      <div>
+        <img class="images" src="http://image.cdnllnwnl.xosnetwork.com/pics33/400/GH/GHXMQPGGMNNOJIJ.20170725143411.jpg">
+        <p class="main-text-color text-center small-text">This is Gary Trent Jr.</p>
+      </div>
+    </div>
+    <div class="mainimage-parent">
+       <img class="mainimage small-image" src="coach-k.jpeg">
+       <p class="mainimage smaller-text"> This is Coach Micheal Krzyzewski. Micheal Krzyzewski is the head coach of the Duke Mens Basketball team. He has been coaching at Duke for 34 years straight and he is now 71 years old. Coach K has led the Duke Basketball team to 5 NCAA Championships, including one in 2015. He also led the Duke team to 12 final fours apperances, 12 ACC regular season titles and 14 ACC championships. Not only does Coach K coach the Duke Basketball team, he also is the coach of the USA Mens National Basketball Team. He has led this USA team to three olympic gold medals in the three most recent olympics. As the coach of the team USA team, he also coaches the NBA all star game sometimes. Coach K has won many awards with the Duke Basketball team, including becoming the coach with the most wins in NCAA Divison I Basketball History. He has gotten 23 people into the NBA, which is the most in NCAA history.</p>
+  </div>
+<% auth = { username: 'ykim632', password: 'classpword'} %>
+<% response = HTTParty.get('https://api.mysportsfeeds.com/v1.2/pull/nba/current/cumulative_player_stats.json?player=jayson-tatum', basic_auth: auth) %>
+<%= data=JSON.parse(response.to_s) %>
+
+
+   <h4 class="main-text-color text-center">Duke Players in the NBA Currently</h4>
+  <table class="playersnba">
+    <tr>
+      <th>Player Name and Number</th>
+      <th>Years at Dukes</th>
+      <th>Years in the NBA</th>
+      <th>Current Team Name</th>
+    </tr>
+
+    <tr>
+      <td>Jayson Tatum #0</td>
+      <td> 1 year at Duke </td>
+      <td> 1 year in the NBA</td>
+      <td> Boston Celtics</td>
+    </tr>
+
+    <tr>
+      <td>Luke Kennard</td>
+      <td> 2 year at Duke </td>
+      <td> 2 year in the NBA</td>
+      <td> Detroit Pistons</td>
+    </tr>
+
+    <tr>
+      <td>Kyrie Irving #2</td>
+      <td> 1 year at Duke </td>
+      <td> 7 year in the NBA</td>
+      <td> Boston Celtics</td>
+    </tr>
+
+    <tr>
+      <td>Brandon Ingram #14</td>
+      <td> 1 year at Duke </td>
+      <td> 2 year in the NBA</td>
+      <td> Los Angeles Lakers</td>
+    </tr>
+
+    <tr>
+      <td>Franklin Jackson #15 </td>
+      <td> 1 year at Duke </td>
+      <td> 2 year in the NBA</td>
+      <td>New Orleans Pelicans</td>
+    </tr>
+
+    <tr>
+      <td>Jahlil Okafor </td>
+      <td> 1 year at Duke </td>
+      <td> 3 year in the NBA</td>
+      <td>Brooklyn Nets</td></td>
+    </tr>
+
+     <tr>
+      <td>Marshall Plumlee </td>
+      <td> 1 year at Duke </td>
+      <td> 3 year in the NBA</td>
+      <td>Milwaukee Bucks</td></td>
+    </tr>
+  </table>
+
+
+
+  <section>
+    <h4 class="main-text-color text-center">Duke Basketball Highlights and Videos</h4>
+    <div class="video-container">
+      <iframe class="video-grid" src="https://www.youtube.com/embed/Xip1oyHCsTo" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/UKI9dGHxL_A" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/sHHCmBR_kAM" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/BFzD2ZA-PVE" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/XkTJfeQYeQY" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/id0l3E8Ow2w" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/-TWsnbY5LUA" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/bs_veZJhSuQ" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/Jt6FtrLdEqs" frameborder="0" allowfullscreen></iframe>
+      <iframe class="video-grid" src="https://www.youtube.com/embed/ouMi7_B7p7E" frameborder="0" allowfullscreen></iframe>
+    <span class="banner-text"> March 20, 2018 </span>
+  </footer>
+</body>
+</html>
+
+

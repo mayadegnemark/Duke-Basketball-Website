@@ -1,0 +1,118 @@
+body {
+  font-family: 'Slabo 27px', serif;
+  margin: 0;
+  background-color: rgba(222, 223, 224, 1);
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+.small-text {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.header-banner {
+  background-color: rgb(0,0,255);
+  height: 60px;
+  width: 100vw;
+}
+
+.banner-text {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 15px 0 15px 30px;
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.main-text-color {
+  color: rgb(0, 0, 255);
+}
+
+#name {
+  color: rgba(20, 139, 230, 1);
+}
+
+.images-parent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.images{
+  display: inline-block;
+  height: 168px;
+  width: auto;
+}
+
+.profile-text {
+  /*margin-left: calc(50% - 250px);*/
+  width: 500px;
+}
+
+.video-container {
+  margin: 0 auto 50px auto;
+  position: relative;
+  width: 80%;
+}
+
+.video-grid {
+  height: 350px;
+  width: calc(50% - 10px);
+}
+
+.footer-banner {
+  background-color:red;
+  height: 60px;
+  width: 100vw;
+
+}
+
+.exclamation-mark {
+  display: inline-block;
+  position: relative;
+  left: -6px;
+}
+
+.mainimage-parent {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*.mainimage {*/
+/*flex-grow: 1;*/
+/*}*/
+
+.small-image {
+  height: 300px;
+  width: auto;
+}
+
+.smaller-text {
+  height: auto;
+  width: 450px;
+}
+
+.playersnba {
+  border-collapse: collapse;
+  display: table;
+  margin: 0 auto;
+  position: relative;
+}
+
+td, th {
+  border: 5px solid #999;
+  padding: 0.5rem;
+}
+
+
